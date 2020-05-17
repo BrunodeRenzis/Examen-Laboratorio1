@@ -8,7 +8,7 @@
 #include "clientes.h"
 int main()
 {
-	//* REVISAR LA BAJA CLIENTE */
+
 
     setbuf(stdout,NULL);
     eClientes vecClientes[CLIENTESTAM];

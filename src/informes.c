@@ -159,7 +159,6 @@ void clienteConMasPrestamosSaldados(eClientes vecClientes[],ePrestamos vecPresta
         printf("El cliente con mas prestamos saldados es: \n");
         showHeaderClientesSaldados();
         showClientePrestamosSaldados(vecClientes[idMax],vecPrestamos,tamPrestamos);
-        printf("\n con %d prestamos saldados",maximo);
     }
     else
     {
