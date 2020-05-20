@@ -96,7 +96,7 @@ char inputChar(char* msg)
 int isNumeric(char* string)
 {
     int i=0;
-    int returnValue=1;
+    int returnValue=-1;
 
     while(string[i]!='\0')
     {
@@ -369,25 +369,48 @@ void isValidCuit(char* cadena,char* mensaje,char* mensajeError,int reintentos)
 
     if(cuil!=NULL && mensaje!=NULL && mensajeError!=NULL && reintentos>=0)
     {
-        while(cuil[i]!='\0')
-        {
-            if((cuil[2]=='-' && cuil[11]=='-' && length==13) ||(length==11))
-            {
-                strcpy(cadena,cuil);
-                break;
-            }
-            else
-            {
-                printf("%s\n",mensajeError);
-                inputStr(mensaje,cuil);
-                if(cuil[2]=='-' && cuil[11]=='-')
-                {
-                    strcpy(cadena,cuil);
-                    break;
-                }
-            }
-            i++;
-        }
+
+
+			while(cuil[i]!='\0')
+			{
+
+				if(isNumeric(cuil))
+				{
+
+
+
+
+					if((cuil[2]=='-' && cuil[11]=='-' && length==13) ||(length==11))
+					{
+						strcpy(cadena,cuil);
+						break;
+					}
+					else
+					{
+						printf("%s\n",mensajeError);
+						inputStr(mensaje,cuil);
+						if(cuil[2]=='-' && cuil[11]=='-')
+						{
+							strcpy(cadena,cuil);
+							break;
+						}
+					}
+				}
+
+				else
+				{
+					printf("Ha ingresado caracteres no numericos, por favor vuelva a intentar: ");
+					inputStr(mensaje,cuil);
+					if(cuil[2]=='-' && cuil[11]=='-')
+					{
+					   strcpy(cadena,cuil);
+					   break;
+					}
+				}
+				i++;
+			}
+
+
         reintentos--;
     }
 }
