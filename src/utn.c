@@ -100,7 +100,7 @@ int isNumeric(char* string)
 
     while(string[i]!='\0')
     {
-        if(string[i]<'0' || string[i]>'9')
+        if(string[i]<'0' || string[i]>'9' || string[i]=='-')
         {
             returnValue=0;
         }
@@ -374,7 +374,7 @@ void isValidCuit(char* cadena,char* mensaje,char* mensajeError,int reintentos)
 			while(cuil[i]!='\0')
 			{
 
-				if(isNumeric(cuil))
+				if(isNumeric(cuil)!=-1)
 				{
 
 

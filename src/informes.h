@@ -25,6 +25,16 @@ void informesClientes(eClientes vecClientes[],ePrestamos vecPrestamos[],int tamC
  *
  */
 
+void clienteConMasPrestamos(eClientes vecClientes[],ePrestamos vecPrestamos[],int tamClientes,int tamPrestamos);
+/** \brief Recorre el vector de prestamos y clientes y muestra al cliente con mas prestamos.
+ *
+ * \param vecClientes vector de clientes de la estructura eClientes
+ * \param vecPrestamos vector de prestamos de la estructura ePrestamos
+ * \param tamClientes tamanio de clientes
+ * \param tamPrestamos tamanio de prestamos
+ *
+ */
+
 void clienteConMasPrestamosActivos(eClientes vecClientes[],ePrestamos vecPrestamos[],int tamClientes,int tamPrestamos);
 /** \brief Recorre el vector de prestamos y clientes y muestra al cliente con mas prestamos activos
  *
@@ -66,7 +76,29 @@ void informesPrestamos(eClientes vecClientes[],ePrestamos vecPrestamos[],int tam
 void prestamosMayoresA1000(ePrestamos vecPrestamos[],eClientes vecClientes[],int tamPrestamos,int tamClientes);
 /** \brief Imprime los prestamos mayores a 1000 de una cifra ingresada por el usuario
  *
- * \param
- * \param
+ * \param vecClientes vector de clientes de la estructura eClientes
+ * \param vecPrestamos vector de prestamos de la estructura ePrestamos
+ * \param tamClientes tamanio de clientes
+ * \param tamPrestamos tamanio de prestamos
+ *
+ */
+
+void prestamosPorCuotas(ePrestamos vecPrestamos[],eClientes vecClientes[],int tamPrestamos,int tamClientes);
+/** \brief Imprime los prestamos de la cantidad de cuotas ingresada por el usuario
+ *
+ * \param vecClientes vector de clientes de la estructura eClientes
+ * \param vecPrestamos vector de prestamos de la estructura ePrestamos
+ * \param tamClientes tamanio de clientes
+ * \param tamPrestamos tamanio de prestamos
+ *
+ */
+
+void prestamosDe12CuotasSaldados(ePrestamos vecPrestamos[],eClientes vecClientes[],int tamPrestamos,int tamClientes);
+/** \brief Imprime los prestamos de 12 cuotas saldados e indica el cliente al que pertenece.
+ *
+ * \param vecClientes vector de clientes de la estructura eClientes
+ * \param vecPrestamos vector de prestamos de la estructura ePrestamos
+ * \param tamClientes tamanio de clientes
+ * \param tamPrestamos tamanio de prestamos
  *
  */

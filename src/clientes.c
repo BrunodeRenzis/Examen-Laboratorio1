@@ -78,6 +78,8 @@ void showHeaderClientesSaldados()
 
 }
 
+
+
 int getCuilCliente(eClientes vecClientes[],int tamClientes,int idCliente,char* cuilCliente){
 	int retorno=-1;
 
